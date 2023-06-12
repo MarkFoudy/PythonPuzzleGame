@@ -1,0 +1,24 @@
+Mark Foudy
+CS5001
+Sliding Puzzle Final Project
+
+The first major design decision was how to represent the game board tiles in a manner conducive to determining 
+whether a tile is adjacent to the blank tile.  For this reason, I chose a 2d list 
+so that I could look at tile neighbors both horizontally and vertically. 
+
+Another design decision was driven by scoping issues. Since the project uses a GUI interface, 
+the main loop of the turtle package initiates calls to the functions which do the actions on clicking.  
+However, those functions all need access to the data structures built to represent the state of play.  
+For that reason the functions are nested under a primary function called play_game(). This function creates 
+the data structures and makes them available to the nested functions within play_game(). 
+
+I ended up having a list game_repository which held all the main data structures for the program. 
+In retrospect, if I was to approach this project again, I would use a class and create an object 
+to hold all those data structures.  I didn’t use this approach because I was initially modeling 
+this project after the remix_master project from homework 5.  That project was interesting and 
+seemed to be a good introduction to designing an interactive game environment.  
+
+I have never programmed before and this class was a real challenge for me, 
+but I am thankful that I had opportunity to learn about programming in such an intensive environment. 
+I really appreciate the help on piazza and in the labs from all the instructors. 
+I look forward to CS5004 and the opportunity to build programs using object-oriented design methods. 
